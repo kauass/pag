@@ -50,7 +50,15 @@ Os botões de compra já disparam eventos. Basta colar o script do GA4 e/ou do M
 
 ## Checkout
 
-O botão principal aponta para o link da Stripe:
-`https://buy.stripe.com/fZu8wJa8BgvXbz77Ki43S01`
+O botão principal aponta para o checkout da Kiwify:
+`https://pay.kiwify.com.br/a0GKsLJ`
 
-Configure o e-mail de entrega automática do produto no painel da Stripe.
+A Kiwify cuida da cobrança, da hospedagem do pack, da área de membros e do
+e-mail de liberação — não há nada de entrega para configurar neste projeto.
+
+Os demais botões da página ("Quero o pack", "Garantir meu acesso", a barra fixa
+do celular) levam para a âncora `#preco`, para o visitante ver a oferta antes de
+ir ao checkout. Só o botão dentro do bloco de preço vai direto para a Kiwify.
+
+Para rastrear as vendas na Utmify, ligue a integração no painel da Kiwify
+(Apps/Integrações → Utmify). É colar o token lá; não precisa de código no site.
