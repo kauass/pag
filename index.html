@@ -90,6 +90,23 @@
   }
   .nav-cta:hover{transform:translateY(-1px); box-shadow:0 6px 22px rgba(198,255,26,.3);}
 
+  /* tira o texto de baixo do header fixo ao pular por ancora */
+  section[id]{scroll-margin-top:76px;}
+
+  /* navegacao por secoes — so aparece no celular, rola junto com a pagina */
+  .navstrip{
+    display:none; gap:8px; overflow-x:auto; padding:12px 18px;
+    border-bottom:1px solid var(--line);
+    -webkit-overflow-scrolling:touch; scrollbar-width:none;
+  }
+  .navstrip::-webkit-scrollbar{display:none;}
+  .navstrip a{
+    flex:0 0 auto; font-size:13px; font-weight:500; padding:8px 15px;
+    border-radius:100px; border:1px solid var(--line); color:var(--text-dim);
+    white-space:nowrap;
+  }
+  .navstrip a:active{border-color:var(--line-hi); color:var(--lime); background:rgba(198,255,26,.06);}
+
   /* ---------- BUTTONS ---------- */
   .btn-primary{
     position:relative; overflow:hidden;
@@ -254,34 +271,6 @@
     padding:2px 8px; border-radius:4px; font-size:12.5px; color:var(--cyan);
   }
 
-  /* ---------- CURSO ---------- */
-  .modules{margin-top:44px; border-top:1px solid var(--line);}
-  .module{border-bottom:1px solid var(--line);}
-  .module-head{
-    width:100%; display:grid; grid-template-columns:52px 1fr auto auto; gap:16px;
-    align-items:center; padding:20px 0; text-align:left;
-    transition:opacity .18s;
-  }
-  .module-head:hover{opacity:.82;}
-  .module .num{font-family:'Oswald'; font-size:21px; color:var(--text-dim); transition:color .2s;}
-  .module[data-open="true"] .num{color:var(--lime);}
-  .module-head h3{font-size:16.5px; text-transform:none; font-weight:600; letter-spacing:0;}
-  .module .dur{font-size:12.5px; color:var(--cyan); white-space:nowrap;}
-  .module .chev{
-    width:11px; height:11px; border-right:2px solid var(--text-dim); border-bottom:2px solid var(--text-dim);
-    transform:rotate(45deg); transition:transform .25s; margin-right:4px;
-  }
-  .module[data-open="true"] .chev{transform:rotate(-135deg); border-color:var(--lime);}
-  .module-body{
-    display:grid; grid-template-rows:0fr; transition:grid-template-rows .3s ease;
-  }
-  .module[data-open="true"] .module-body{grid-template-rows:1fr;}
-  .module-body > div{overflow:hidden;}
-  .module-body p{
-    color:var(--text-dim); font-size:14.5px; max-width:640px;
-    padding:0 0 22px 68px;
-  }
-
   /* ---------- BÔNUS ---------- */
   .bonus{background:var(--bg-alt);}
   .bonus-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:44px;}
@@ -436,19 +425,74 @@
     .pack-card.big{grid-row:auto; grid-column:1 / -1;}
   }
   @media (max-width:760px){
-    section{padding:64px 0;}
-    .hero{padding:56px 0 60px;}
-    .pack-grid, .aud-grid, .pain-grid, .bonus-grid{grid-template-columns:1fr;}
-    .hero-meta{grid-template-columns:1fr 1fr; gap:22px;}
+    .wrap{padding:0 18px;}
+    section[id]{scroll-margin-top:60px;}
+
+    /* header mais baixo + navegacao por secoes */
+    header .wrap{height:56px; gap:12px;}
+    .logo{font-size:16px;}
+    .nav-cta{padding:9px 15px; font-size:13px;}
+    .navstrip{display:flex;}
+
+    /* tipografia: o desktop era grande demais em tela pequena */
+    .hero h1{font-size:clamp(27px, 7.4vw, 36px);}
+    .hero p.lead{font-size:15.5px; margin-top:16px;}
+    section h2{font-size:clamp(22px, 5.8vw, 30px);}
+    section p.section-lead{font-size:15px;}
+    .kicker{font-size:11.5px; letter-spacing:1.2px; margin-bottom:8px;}
+
+    /* respiro vertical menor: menos rolagem ate o preco */
+    section{padding:46px 0;}
+    .hero{padding:32px 0 42px;}
+    .hero-grid{gap:32px;}
+
+    /* cards mais compactos */
+    .pack-grid, .aud-grid, .pain-grid, .bonus-grid{grid-template-columns:1fr; gap:12px;}
+    .pack-card, .aud-card, .pain, .bonus-card{padding:20px;}
+    .pack-card h3{font-size:17px;}
+    .pack-card p, .aud-card p, .pain p, .bonus-card p{font-size:14px;}
+    .aud-card .ico{width:34px; height:34px; margin-bottom:12px;}
+    .waveform{height:48px;}
+    .pain-answer{padding:20px; font-size:15.5px; margin-top:24px;}
+
+    /* stats do hero em 3 colunas curtas, sem quebrar linha */
+    .hero-meta{grid-template-columns:repeat(3,1fr); gap:12px; margin-top:26px; padding-top:18px;}
+    .hero-meta .n{font-size:20px;}
+    .hero-meta .l{font-size:11px; max-width:none; margin-top:4px;}
+
+    /* botoes com area de toque cheia */
+    .cta-row{gap:10px; margin-top:24px;}
     .cta-row .btn-primary, .cta-row .btn-ghost{width:100%;}
-    .module-head{grid-template-columns:36px 1fr auto; gap:12px;}
-    .module .dur{grid-column:2; grid-row:2; margin-top:2px;}
-    .module-body p{padding-left:48px;}
-    .price-box{padding:36px 22px;}
-    .value-stack{padding:18px;}
-    footer{text-align:center;}
+    .btn-primary{padding:15px 22px; font-size:15.5px;}
+    .btn-ghost{padding:14px 22px; font-size:14px;}
+    .trust-row{gap:10px 14px; margin-top:20px; font-size:12.5px;}
+
+    /* mockup ocupava meia tela sem vender nada */
+    .phone{max-width:196px;}
+
+    /* bloco de preco */
+    .price-box{padding:28px 18px; border-radius:12px;}
+    .price-box .now{font-size:52px;}
+    .price-box ul{margin:20px 0; font-size:14px;}
+    .value-stack{padding:16px;}
+    .value-stack .vr{font-size:13.5px; padding:8px 0;}
+    .guarantee{padding:15px 16px; gap:12px;}
+    .guarantee .seal{width:42px; height:42px; font-size:10px;}
+
+    /* FAQ com alvo de toque maior */
+    .faq-q{padding:17px 0; font-size:15px;}
+    .faq-a p{font-size:14px;}
+
+    footer{text-align:center; padding:32px 0 96px;}
     footer .wrap{justify-content:center;}
     .sticky-cta{display:flex;}
+  }
+
+  @media (max-width:400px){
+    .hero-meta{grid-template-columns:1fr 1fr;}
+    .price-box .now{font-size:46px;}
+    .sticky-cta .p b{font-size:20px;}
+    .sticky-cta .btn-primary{padding:12px 16px; font-size:14px;}
   }
 
   :focus-visible{outline:2px solid var(--cyan); outline-offset:3px; border-radius:3px;}
@@ -466,7 +510,6 @@
     <a href="#top" class="logo">ELETRO<span>FUNK</span> GYN</a>
     <nav class="main">
       <a href="#pack">O pack</a>
-      <a href="#curso">O curso</a>
       <a href="#bonus">Bônus</a>
       <a href="#preco">Preço</a>
       <a href="#faq">Dúvidas</a>
@@ -474,6 +517,14 @@
     <a href="#preco" class="nav-cta" data-cta="header">Quero o pack</a>
   </div>
 </header>
+
+<nav class="navstrip" aria-label="Seções da página">
+  <a href="#pack">O pack</a>
+  <a href="#bonus">Bônus</a>
+  <a href="#para-quem">Pra quem é</a>
+  <a href="#preco">Preço</a>
+  <a href="#faq">Dúvidas</a>
+</nav>
 
 <main id="top">
 
@@ -603,90 +654,6 @@
     <p class="pack-note">
       Formato <code>.WAV 44.1kHz</code> · compatível com <code>FL Studio Mobile</code>, <code>FL Studio PC</code>, <code>BandLab</code> e qualquer DAW · pastas nomeadas por tipo, BPM e tom.
     </p>
-  </div>
-</section>
-
-<!-- ============ CURSO ============ -->
-<section id="curso">
-  <div class="wrap">
-    <p class="kicker">O curso</p>
-    <h2>Do primeiro beat à faixa fechada</h2>
-    <p class="section-lead">Aulas curtas, gravadas direto na tela do FL Studio Mobile, pra você acompanhar no seu próprio celular enquanto produz. Toque no módulo pra ver o que tem dentro.</p>
-
-    <div class="modules" id="modules">
-      <div class="module" data-open="true">
-        <button class="module-head" aria-expanded="true">
-          <span class="num">01</span>
-          <h3>Configurando o FL Mobile pra eletrofunk</h3>
-          <span class="dur">12 min</span>
-          <span class="chev"></span>
-        </button>
-        <div class="module-body"><div><p>Projeto, BPM, template inicial e organização de faixas do jeito certo desde o começo — pra você nunca mais se perder no meio da produção.</p></div></div>
-      </div>
-      <div class="module">
-        <button class="module-head" aria-expanded="false">
-          <span class="num">02</span>
-          <h3>Montando o tamborzão</h3>
-          <span class="dur">18 min</span>
-          <span class="chev"></span>
-        </button>
-        <div class="module-body"><div><p>Como programar o padrão de bumbo e caixa que dá o balanço característico, e como variar o groove pra faixa não ficar repetitiva.</p></div></div>
-      </div>
-      <div class="module">
-        <button class="module-head" aria-expanded="false">
-          <span class="num">03</span>
-          <h3>Grave que treme o carro</h3>
-          <span class="dur">15 min</span>
-          <span class="chev"></span>
-        </button>
-        <div class="module-body"><div><p>Desenhando e mixando o sub-bass pra som automotivo: escolha da nota, corte de frequência e limitação pra empurrar sem distorcer.</p></div></div>
-      </div>
-      <div class="module">
-        <button class="module-head" aria-expanded="false">
-          <span class="num">04</span>
-          <h3>Vocal chops e hooks</h3>
-          <span class="dur">14 min</span>
-          <span class="chev"></span>
-        </button>
-        <div class="module-body"><div><p>Cortando, afinando e encaixando vocais pra criar o gancho que gruda na cabeça de quem escuta.</p></div></div>
-      </div>
-      <div class="module">
-        <button class="module-head" aria-expanded="false">
-          <span class="num">05</span>
-          <h3>Camadas de FX e ambientação</h3>
-          <span class="dur">10 min</span>
-          <span class="chev"></span>
-        </button>
-        <div class="module-body"><div><p>Usando os efeitos automotivos do pack pra dar identidade sonora e criar transição entre as partes da faixa.</p></div></div>
-      </div>
-      <div class="module">
-        <button class="module-head" aria-expanded="false">
-          <span class="num">06</span>
-          <h3>Arranjo: da introdução ao drop</h3>
-          <span class="dur">16 min</span>
-          <span class="chev"></span>
-        </button>
-        <div class="module-body"><div><p>Estrutura de faixa que funciona pra pista e pra carro de som — onde entra cada elemento e por quanto tempo.</p></div></div>
-      </div>
-      <div class="module">
-        <button class="module-head" aria-expanded="false">
-          <span class="num">07</span>
-          <h3>Mixagem rápida no celular</h3>
-          <span class="dur">17 min</span>
-          <span class="chev"></span>
-        </button>
-        <div class="module-body"><div><p>EQ, compressão e balanço de volume pra sua faixa soar bem no fone, na caixa de som e no paredão.</p></div></div>
-      </div>
-      <div class="module">
-        <button class="module-head" aria-expanded="false">
-          <span class="num">08</span>
-          <h3>Exportando e postando</h3>
-          <span class="dur">9 min</span>
-          <span class="chev"></span>
-        </button>
-        <div class="module-body"><div><p>Formatos e volumes certos pra WhatsApp, redes sociais, streaming e pen drive de equipe de som.</p></div></div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -914,7 +881,6 @@
       btn.setAttribute("aria-expanded", open ? "false" : "true");
     });
   }
-  accordion("modules", ".module", ".module-head", true);
   accordion("faqList", ".faq-item", ".faq-q", false);
 
   /* ---- reveal on scroll ---- */
