@@ -350,26 +350,6 @@
   .pay-icons span{
     border:1px solid var(--line); padding:4px 10px; border-radius:5px; letter-spacing:.3px;
   }
-  /* ---------- FAQ ---------- */
-  .faq-list{margin-top:40px; max-width:760px;}
-  .faq-item{border-bottom:1px solid var(--line);}
-  .faq-q{
-    width:100%; display:flex; justify-content:space-between; align-items:center; gap:20px;
-    padding:20px 0; text-align:left; font-size:16px; font-weight:600;
-  }
-  .faq-q:hover{color:var(--lime);}
-  .faq-q .plus{position:relative; width:14px; height:14px; flex-shrink:0;}
-  .faq-q .plus::before, .faq-q .plus::after{
-    content:""; position:absolute; background:var(--lime); border-radius:2px; transition:transform .25s;
-  }
-  .faq-q .plus::before{top:6px; left:0; width:14px; height:2px;}
-  .faq-q .plus::after{top:0; left:6px; width:2px; height:14px;}
-  .faq-item[data-open="true"] .plus::after{transform:rotate(90deg);}
-  .faq-a{display:grid; grid-template-rows:0fr; transition:grid-template-rows .3s ease;}
-  .faq-item[data-open="true"] .faq-a{grid-template-rows:1fr;}
-  .faq-a > div{overflow:hidden;}
-  .faq-a p{color:var(--text-dim); font-size:14.8px; padding-bottom:20px; max-width:660px;}
-
   /* ---------- CTA FINAL ---------- */
   .final{
     text-align:center; border-bottom:none;
@@ -464,9 +444,6 @@
     .value-stack{padding:16px;}
     .value-stack .vr{font-size:13.5px; padding:8px 0;}
 
-    /* FAQ com alvo de toque maior */
-    .faq-q{padding:17px 0; font-size:15px;}
-    .faq-a p{font-size:14px;}
 
     footer{text-align:center; padding:32px 0 96px;}
     footer .wrap{justify-content:center;}
@@ -497,7 +474,6 @@
       <a href="#pack">O pack</a>
       <a href="#bonus">Bônus</a>
       <a href="#preco">Preço</a>
-      <a href="#faq">Dúvidas</a>
     </nav>
     <a href="#preco" class="nav-cta" data-cta="header">Quero o pack</a>
   </div>
@@ -508,7 +484,6 @@
   <a href="#bonus">Bônus</a>
   <a href="#para-quem">Pra quem é</a>
   <a href="#preco">Preço</a>
-  <a href="#faq">Dúvidas</a>
 </nav>
 
 <main id="top">
@@ -733,44 +708,6 @@
   </div>
 </section>
 
-<!-- ============ FAQ ============ -->
-<section id="faq">
-  <div class="wrap">
-    <p class="kicker">Dúvidas</p>
-    <h2>Perguntas frequentes</h2>
-    <div class="faq-list" id="faqList">
-      <div class="faq-item" data-open="true">
-        <button class="faq-q" aria-expanded="true">Preciso de computador pra usar o pack?<i class="plus"></i></button>
-        <div class="faq-a"><div><p>Não. Todo o material foi pensado pra rodar no FL Studio Mobile, no celular ou tablet (Android e iOS). Se você também produz no PC, os arquivos funcionam igual — são WAV comum.</p></div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" aria-expanded="false">Posso usar os samples em faixas que vou vender ou lançar?<i class="plus"></i></button>
-        <div class="faq-a"><div><p>Sim. A licença é livre pra suas próprias produções — incluindo lançamento em streaming, venda de beat e uso em set — sem custo de royalties. O que não pode é revender o pack em si.</p></div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" aria-expanded="false">E se eu nunca produzi nada antes?<i class="plus"></i></button>
-        <div class="faq-a"><div><p>O curso começa na instalação e na organização do projeto, explicando cada botão que você precisa tocar. Não pressupõe nenhum conhecimento anterior de música ou de produção.</p></div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" aria-expanded="false">Funciona na versão gratuita do FL Studio Mobile?<i class="plus"></i></button>
-        <div class="faq-a"><div><p>Os samples funcionam em qualquer app que importe WAV. O curso é gravado no FL Studio Mobile completo; a maior parte dos passos funciona também em versões trial e em alternativas gratuitas como o BandLab, com pequenas diferenças de menu.</p></div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" aria-expanded="false">Como recebo o acesso?<i class="plus"></i></button>
-        <div class="faq-a"><div><p>Assim que o pagamento é confirmado, você recebe no e-mail da compra o acesso à área de membros, onde ficam o download do pack e as aulas. No Pix costuma levar poucos minutos.</p></div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" aria-expanded="false">Quanto espaço o pack ocupa no celular?<i class="plus"></i></button>
-        <div class="faq-a"><div><p>O pack é dividido em pastas por tipo de som — tamborzão, graves, vocais, FX e melodias. Você baixa só a pasta que for usar em cada projeto, em vez de puxar tudo de uma vez pro celular.</p></div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" aria-expanded="false">O acesso expira?<i class="plus"></i></button>
-        <div class="faq-a"><div><p>Não. É pagamento único e acesso vitalício, incluindo os lotes novos de samples que forem lançados depois da sua compra.</p></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ============ CTA FINAL ============ -->
 <section class="final">
   <div class="wrap">
@@ -790,7 +727,6 @@
   <div class="wrap">
     <p>© <span id="year">2026</span> Eletrofunk GYN — produzido com FL Studio Mobile.</p>
     <nav>
-      <a href="#faq">Dúvidas</a>
       <a href="/termos.html">Termos e licença</a>
     </nav>
   </div>
@@ -802,36 +738,22 @@
   <a href="#preco" class="btn-primary" data-cta="sticky">Quero o pack</a>
 </div>
 
-<!-- Dados estruturados: produto + FAQ (rich results no Google) -->
+<!-- Dados estruturados do produto (rich results no Google) -->
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
-  "@graph":[
-    {
-      "@type":"Product",
-      "name":"Pack Eletrofunk GYN 2026 + Curso FL Studio Mobile",
-      "description":"Os samples e o método do eletrofunk de Goiânia: pack com 120+ sons (tamborzão, graves, vocal chops e FX automotivos) e curso completo de 8 aulas de produção no FL Studio Mobile.",
-      "brand":{"@type":"Brand","name":"Eletrofunk GYN"},
-      "category":"Sample pack e curso de produção musical",
-      "offers":{
-        "@type":"Offer",
-        "price":"45.00",
-        "priceCurrency":"BRL",
-        "availability":"https://schema.org/InStock",
-        "url":"https://eletrofunk-gyn.vercel.app/#preco"
-      }
-    },
-    {
-      "@type":"FAQPage",
-      "mainEntity":[
-        {"@type":"Question","name":"Preciso de computador pra usar o pack?","acceptedAnswer":{"@type":"Answer","text":"Não. Todo o material foi pensado pra rodar no FL Studio Mobile, no celular ou tablet. Os arquivos também funcionam em qualquer DAW de computador."}},
-        {"@type":"Question","name":"Posso usar os samples em faixas que vou vender ou lançar?","acceptedAnswer":{"@type":"Answer","text":"Sim. A licença é livre para suas próprias produções, incluindo lançamento em streaming e uso em set, sem custo de royalties."}},
-        {"@type":"Question","name":"E se eu nunca produzi nada antes?","acceptedAnswer":{"@type":"Answer","text":"O curso começa na instalação e organização do projeto e não pressupõe nenhum conhecimento anterior de música ou produção."}},
-        {"@type":"Question","name":"Como recebo o acesso?","acceptedAnswer":{"@type":"Answer","text":"Assim que o pagamento é confirmado, você recebe no e-mail da compra o acesso à área de membros, onde ficam o download do pack e as aulas."}},
-        {"@type":"Question","name":"O acesso expira?","acceptedAnswer":{"@type":"Answer","text":"Não. É pagamento único com acesso vitalício, incluindo os novos lotes de samples lançados depois da compra."}}
-      ]
-    }
-  ]
+  "@type":"Product",
+  "name":"Pack Eletrofunk GYN 2026 + Curso FL Studio Mobile",
+  "description":"Os samples e o método do eletrofunk de Goiânia: pack com 120+ sons (tamborzão, graves, vocal chops e FX automotivos) e curso completo de 8 aulas de produção no FL Studio Mobile.",
+  "brand":{"@type":"Brand","name":"Eletrofunk GYN"},
+  "category":"Sample pack e curso de produção musical",
+  "offers":{
+    "@type":"Offer",
+    "price":"45.00",
+    "priceCurrency":"BRL",
+    "availability":"https://schema.org/InStock",
+    "url":"https://eletrofunk-gyn.vercel.app/#preco"
+  }
 }
 </script>
 
@@ -842,27 +764,6 @@
 
   /* ---- ano no rodapé ---- */
   document.getElementById("year").textContent = new Date().getFullYear();
-
-  /* ---- accordion genérico (curso + faq) ---- */
-  function accordion(containerId, itemSel, btnSel, exclusive){
-    var box = document.getElementById(containerId);
-    if(!box) return;
-    box.addEventListener("click", function(e){
-      var btn = e.target.closest(btnSel);
-      if(!btn) return;
-      var item = btn.closest(itemSel);
-      var open = item.getAttribute("data-open") === "true";
-      if(exclusive){
-        box.querySelectorAll(itemSel).forEach(function(i){
-          i.setAttribute("data-open","false");
-          i.querySelector(btnSel).setAttribute("aria-expanded","false");
-        });
-      }
-      item.setAttribute("data-open", open ? "false" : "true");
-      btn.setAttribute("aria-expanded", open ? "false" : "true");
-    });
-  }
-  accordion("faqList", ".faq-item", ".faq-q", false);
 
   /* ---- reveal on scroll ---- */
   var revealEls = document.querySelectorAll(".reveal");
