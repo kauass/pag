@@ -1,6 +1,6 @@
-# Pack Eletrofunk GYN — página de vendas
+# Pack Eletrofunk — página de vendas
 
-Landing page estática (HTML/CSS/JS puro, sem build) para o Pack Eletrofunk GYN 2026 + Curso FL Studio Mobile.
+Landing page estática (HTML/CSS/JS puro, sem build) para o pack de samples de eletrofunk (FL Studio Mobile e PC).
 
 ## Arquivos
 
@@ -36,11 +36,16 @@ vercel --prod
 
 1. **Domínio** — trocar `https://eletrofunk-gyn.vercel.app/` nas tags `canonical`, Open Graph e JSON-LD pelo domínio final.
 2. **Imagem social (`og.png`)** — criar uma imagem 1200×630 e colocar na raiz do projeto. Sem ela, o link compartilhado no WhatsApp/Instagram aparece sem prévia.
-3. **Números do curso** — os totais (120+ samples, 1h51, contagens por pasta) e o valor somado de R$ 341 precisam bater com o produto real.
+3. **Números do pack** — os totais (120+ samples, 12 kits e as contagens por categoria) precisam bater com o que está dentro do .zip.
 
 Não há WhatsApp nem e-mail de contato na página: todo o suporte é direcionado para a resposta ao e-mail de confirmação da compra. Se quiser adicionar um canal depois, é só me pedir.
 
-Não há seção de depoimentos. Quando tiver depoimentos **reais** de alunos, dá pra incluir — depoimento inventado é propaganda enganosa (CDC art. 37) e derruba conta de anúncio no Meta e no Google.
+Não há seção de depoimentos. Quando tiver depoimentos **reais** de compradores, dá pra incluir — depoimento inventado é propaganda enganosa (CDC art. 37) e derruba conta de anúncio no Meta e no Google.
+
+## Estrutura da página
+
+Hero → o que vem no pack → como foi montado → onde funciona (Mobile/PC/outras DAWs)
+→ o que vem junto → pra quem é → preço → CTA final.
 
 ## Analytics
 
@@ -56,7 +61,7 @@ O botão principal aponta para o checkout da Kiwify:
 A Kiwify cuida da cobrança, da hospedagem do pack, da área de membros e do
 e-mail de liberação — não há nada de entrega para configurar neste projeto.
 
-Os demais botões da página ("Quero o pack", "Garantir meu acesso", a barra fixa
+Os demais botões da página ("Comprar", "Comprar o pack por R$ 45", a barra fixa
 do celular) levam para a âncora `#preco`, para o visitante ver a oferta antes de
 ir ao checkout. Só o botão dentro do bloco de preço vai direto para a Kiwify.
 
