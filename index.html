@@ -5,875 +5,272 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pack de Samples de Eletrofunk | FL Studio Mobile e PC</title>
 
-<meta name="description" content="Pack com 120+ samples de eletrofunk em WAV 44.1kHz: kits de bateria, 808, vocal chops, FX e loops de melodia, organizados por pasta com BPM e tom no nome. Funciona no FL Studio Mobile e no PC. R$ 45, pagamento único.">
-<meta name="author" content="Pack Eletrofunk">
-<meta name="theme-color" content="#0a0f0a">
+<meta name="description" content="120+ samples de eletrofunk em WAV: kits de bateria, 808, vocal chops, FX e loops de melodia. Funciona no FL Studio Mobile e no PC. R$ 45, pagamento único, download na hora.">
+<meta name="theme-color" content="#0a0d0a">
 <link rel="canonical" href="https://eletrofunk-gyn.vercel.app/">
 
-<!-- Open Graph / redes sociais -->
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Pack Eletrofunk">
-<meta property="og:title" content="Pack de samples de eletrofunk pro FL Studio Mobile e PC">
-<meta property="og:description" content="120+ samples em WAV: kits de bateria, 808, vocal chops, FX e loops de melodia — separados por pasta, com BPM e tom no nome. R$ 45, pagamento único.">
+<meta property="og:title" content="Pack de samples de eletrofunk — FL Studio Mobile e PC">
+<meta property="og:description" content="120+ samples em WAV, organizados por pasta, com BPM e tom no nome. R$ 45, pagamento único, download na hora.">
 <meta property="og:url" content="https://eletrofunk-gyn.vercel.app/">
 <meta property="og:image" content="https://eletrofunk-gyn.vercel.app/og.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Pack de samples de eletrofunk pro FL Studio Mobile e PC">
-<meta name="twitter:description" content="120+ samples de eletrofunk em WAV, organizados por pasta, BPM e tom. FL Studio Mobile e PC. R$ 45, pagamento único.">
+<meta name="twitter:title" content="Pack de samples de eletrofunk — FL Studio Mobile e PC">
+<meta name="twitter:description" content="120+ samples em WAV. R$ 45, pagamento único, download na hora.">
 <meta name="twitter:image" content="https://eletrofunk-gyn.vercel.app/og.png">
 
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230a0f0a'/%3E%3Cg fill='%23c6ff1a'%3E%3Crect x='18' y='42' width='9' height='16' rx='4'/%3E%3Crect x='33' y='28' width='9' height='44' rx='4'/%3E%3Crect x='48' y='16' width='9' height='68' rx='4'/%3E%3Crect x='63' y='34' width='9' height='32' rx='4'/%3E%3Crect x='78' y='46' width='9' height='8' rx='4'/%3E%3C/g%3E%3C/svg%3E">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230a0d0a'/%3E%3Cg fill='%23c6ff1a'%3E%3Crect x='18' y='42' width='9' height='16' rx='4'/%3E%3Crect x='33' y='28' width='9' height='44' rx='4'/%3E%3Crect x='48' y='16' width='9' height='68' rx='4'/%3E%3Crect x='63' y='34' width='9' height='32' rx='4'/%3E%3Crect x='78' y='46' width='9' height='8' rx='4'/%3E%3C/g%3E%3C/svg%3E">
 
 <style>
+  /* Sem fonte externa de proposito: a pagina renderiza no primeiro
+     carregamento, sem esperar download de fonte. */
   :root{
-    --bg: #080c08;
-    --bg-alt: #0d140f;
-    --card: #111a13;
-    --card-hi: #16211a;
-    --line: rgba(230,255,235,0.10);
-    --line-hi: rgba(198,255,26,0.28);
-    --lime: #c6ff1a;
-    --cyan: #22e8d5;
-    --magenta: #ff3d9a;
-    --text: #eaf6ef;
-    --text-dim: #93a99b;
-    --radius: 10px;
-    --maxw: 1120px;
+    --bg:#0a0d0a;
+    --card:#121a14;
+    --line:rgba(230,255,235,.12);
+    --lime:#c6ff1a;
+    --cyan:#22e8d5;
+    --text:#eaf6ef;
+    --dim:#8fa697;
+    --display:system-ui,-apple-system,"Segoe UI Variable Display","Segoe UI",Roboto,sans-serif;
   }
-  *{box-sizing:border-box; margin:0; padding:0;}
-  html{scroll-behavior:smooth; -webkit-text-size-adjust:100%;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{-webkit-text-size-adjust:100%;}
   body{
-    background:var(--bg);
-    color:var(--text);
-    font-family:'Inter', system-ui, -apple-system, Segoe UI, sans-serif;
-    line-height:1.65;
-    overflow-x:hidden;
-    -webkit-font-smoothing:antialiased;
+    background:var(--bg); color:var(--text);
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    line-height:1.6; -webkit-font-smoothing:antialiased;
+    padding-bottom:84px; /* espaco da barra fixa do celular */
   }
-  h1,h2,h3,.display{
-    font-family:'Oswald', Impact, sans-serif;
-    font-weight:700;
-    text-transform:uppercase;
-    letter-spacing:0.5px;
-    line-height:1.05;
-  }
-  img{max-width:100%; display:block;}
-  a{color:inherit; text-decoration:none;}
-  button{font:inherit; color:inherit; background:none; border:none; cursor:pointer;}
-  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 24px;}
-  .center{text-align:center;}
-  ::selection{background:var(--lime); color:#080c08;}
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  ::selection{background:var(--lime);color:#0a0d0a;}
+  .wrap{max-width:640px;margin:0 auto;padding:0 20px;}
 
-  /* ---------- HEADER ---------- */
-  header{
-    position:sticky; top:0; z-index:60;
-    background:rgba(8,12,8,0.82);
-    backdrop-filter:blur(12px);
-    -webkit-backdrop-filter:blur(12px);
+  h1,h2,.num{font-family:var(--display);font-weight:800;letter-spacing:-.02em;line-height:1.08;}
+
+  /* ---------- TOPO ---------- */
+  .bar{
     border-bottom:1px solid var(--line);
+    padding:14px 0; font-size:14px; color:var(--dim);
   }
-  header .wrap{display:flex; align-items:center; gap:24px; height:68px;}
-  .logo{font-family:'Oswald'; font-weight:700; font-size:19px; letter-spacing:0.5px; flex-shrink:0;}
-  .logo span{color:var(--lime);}
-  nav.main{display:flex; gap:26px; margin-left:auto; font-size:14.5px; color:var(--text-dim);}
-  nav.main a{transition:color .18s;}
-  nav.main a:hover{color:var(--lime);}
-  .nav-cta{
-    background:var(--lime); color:#080c08; font-weight:700; font-size:14px;
-    padding:11px 20px; border-radius:6px; flex-shrink:0;
-    transition:transform .18s, box-shadow .18s;
-  }
-  .nav-cta:hover{transform:translateY(-1px); box-shadow:0 6px 22px rgba(198,255,26,.3);}
-
-  /* tira o texto de baixo do header fixo ao pular por ancora */
-  section[id]{scroll-margin-top:76px;}
-
-  /* navegacao por secoes — so aparece no celular, rola junto com a pagina */
-  .navstrip{
-    display:none; gap:8px; overflow-x:auto; padding:12px 18px;
-    border-bottom:1px solid var(--line);
-    -webkit-overflow-scrolling:touch; scrollbar-width:none;
-  }
-  .navstrip::-webkit-scrollbar{display:none;}
-  .navstrip a{
-    flex:0 0 auto; font-size:13px; font-weight:500; padding:8px 15px;
-    border-radius:100px; border:1px solid var(--line); color:var(--text-dim);
-    white-space:nowrap;
-  }
-  .navstrip a:active{border-color:var(--line-hi); color:var(--lime); background:rgba(198,255,26,.06);}
-
-  /* ---------- BUTTONS ---------- */
-  .btn-primary{
-    position:relative; overflow:hidden;
-    background:linear-gradient(135deg, var(--lime), #a8e600);
-    color:#080c08; font-weight:700; font-size:16.5px;
-    padding:17px 34px; border-radius:8px;
-    box-shadow:0 0 30px rgba(198,255,26,.28), inset 0 1px 0 rgba(255,255,255,.35);
-    display:inline-block; text-align:center;
-    transition:transform .18s, box-shadow .18s;
-  }
-  .btn-primary:hover{transform:translateY(-2px); box-shadow:0 8px 40px rgba(198,255,26,.45);}
-  .btn-primary:active{transform:translateY(0);}
-  .btn-primary .sub{display:block; font-size:12.5px; font-weight:500; opacity:.72; margin-top:2px;}
-  .btn-ghost{
-    border:1px solid var(--line); color:var(--text); font-weight:600; font-size:15px;
-    padding:16px 28px; border-radius:8px; display:inline-block; transition:border-color .18s, background .18s;
-  }
-  .btn-ghost:hover{border-color:var(--line-hi); background:rgba(198,255,26,.05);}
+  .bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;}
+  .brand{font-family:var(--display);font-weight:800;font-size:15px;color:var(--text);letter-spacing:.02em;text-transform:uppercase;}
+  .brand span{color:var(--lime);}
 
   /* ---------- HERO ---------- */
-  .hero{
-    position:relative; overflow:hidden;
-    padding:76px 0 72px;
-    background:
-      radial-gradient(ellipse 720px 420px at 12% -5%, rgba(198,255,26,.13), transparent 62%),
-      radial-gradient(ellipse 620px 520px at 102% 12%, rgba(34,232,213,.12), transparent 62%),
-      radial-gradient(ellipse 500px 300px at 60% 100%, rgba(255,61,154,.07), transparent 65%);
-    border-bottom:1px solid var(--line);
+  .hero{padding:40px 0 8px;text-align:center;}
+  .eyebrow{
+    display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--cyan);margin-bottom:16px;
   }
-  .hero::after{
-    content:""; position:absolute; inset:0; pointer-events:none; opacity:.35;
-    background-image:linear-gradient(rgba(198,255,26,.04) 1px, transparent 1px);
-    background-size:100% 4px;
-  }
-  .hero-grid{
-    position:relative; z-index:2;
-    display:grid; grid-template-columns:1.15fr .85fr; gap:56px; align-items:center;
-  }
-  .hero h1{font-size:clamp(36px, 5.4vw, 62px);}
-  .hero h1 em{
-    font-style:normal; color:var(--lime);
-    text-shadow:0 0 26px rgba(198,255,26,.45);
-  }
-  .hero p.lead{color:var(--text-dim); font-size:17.5px; margin-top:22px; max-width:540px;}
-  .cta-row{display:flex; align-items:center; gap:16px; margin-top:34px; flex-wrap:wrap;}
-  .trust-row{
-    display:flex; align-items:center; gap:14px; margin-top:26px;
-    font-size:13.5px; color:var(--text-dim); flex-wrap:wrap;
-  }
-  .trust-row .item{display:flex; align-items:center; gap:7px;}
-  .trust-row svg{width:15px; height:15px; flex-shrink:0; color:var(--lime);}
-  .hero-meta{
-    display:grid; grid-template-columns:repeat(3,auto); gap:34px; margin-top:44px;
-    border-top:1px solid var(--line); padding-top:24px; justify-content:start;
-  }
-  .hero-meta .n{font-family:'Oswald'; font-size:30px; color:var(--cyan); line-height:1;}
-  .hero-meta .l{font-size:12.5px; color:var(--text-dim); margin-top:6px; line-height:1.35; max-width:130px;}
+  h1{font-size:clamp(30px,7.2vw,44px);}
+  h1 em{font-style:normal;color:var(--lime);}
+  .sub{color:var(--dim);font-size:17px;margin-top:16px;}
 
-  /* ---------- PHONE MOCKUP ---------- */
-  .phone{
-    position:relative; width:100%; max-width:286px; margin:0 auto;
-    aspect-ratio:9/17.5;
-    background:linear-gradient(160deg, #1a2620, #0b110d);
-    border:2px solid rgba(198,255,26,.22);
-    border-radius:34px; padding:12px;
-    box-shadow:0 26px 70px rgba(0,0,0,.65), 0 0 60px rgba(198,255,26,.14);
+  /* ---------- BLOCO DE COMPRA ---------- */
+  .buy{
+    margin:28px 0 0; padding:24px 20px;
+    background:var(--card); border:1px solid var(--line); border-radius:14px;
   }
-  .phone::before{
-    content:""; position:absolute; top:9px; left:50%; transform:translateX(-50%);
-    width:78px; height:5px; border-radius:4px; background:rgba(255,255,255,.13);
+  .price{display:flex;align-items:baseline;justify-content:center;gap:10px;}
+  .price .num{font-size:60px;color:var(--lime);line-height:1;}
+  .price .num sup{font-size:22px;vertical-align:top;margin-right:2px;top:.4em;position:relative;}
+  .price .once{font-size:14px;color:var(--dim);text-align:left;line-height:1.25;}
+  .cta{
+    display:block;width:100%;margin-top:18px;
+    background:var(--lime);color:#0a0d0a;
+    font-family:var(--display);font-weight:800;font-size:19px;
+    padding:18px 20px;border-radius:10px;text-align:center;
+    box-shadow:0 6px 24px rgba(198,255,26,.22);
+    transition:transform .15s, box-shadow .15s;
   }
-  .phone-screen{
-    height:100%; background:#070b08; border-radius:24px; padding:22px 13px 13px;
-    display:flex; flex-direction:column; gap:11px; overflow:hidden;
+  .cta:hover{transform:translateY(-2px);box-shadow:0 10px 32px rgba(198,255,26,.34);}
+  .cta:active{transform:translateY(0);}
+  .under{margin-top:12px;font-size:13.5px;color:var(--dim);}
+  .under b{color:var(--text);font-weight:600;}
+
+  /* ---------- LISTA CURTA ---------- */
+  ul.checks{list-style:none;margin:22px 0 0;text-align:left;}
+  ul.checks li{
+    position:relative;padding:7px 0 7px 28px;font-size:15.5px;color:var(--text);
   }
-  .ph-top{display:flex; justify-content:space-between; align-items:center; font-size:9.5px; color:var(--text-dim);}
-  .ph-top b{color:var(--lime); font-family:'Oswald'; font-size:11px; letter-spacing:.6px;}
-  .seq{display:flex; flex-direction:column; gap:6px;}
-  .seq-row{display:grid; grid-template-columns:38px 1fr; gap:7px; align-items:center;}
-  .seq-row .nm{font-size:8.5px; color:var(--text-dim); text-transform:uppercase; letter-spacing:.4px;}
-  .steps{display:grid; grid-template-columns:repeat(8,1fr); gap:4px;}
-  .step{
-    aspect-ratio:1; border-radius:3px; background:rgba(255,255,255,.055);
-    border:1px solid rgba(255,255,255,.05); transition:background .1s, box-shadow .1s;
-  }
-  .step.on{background:var(--lime); border-color:var(--lime);}
-  .step.on.c2{background:var(--cyan); border-color:var(--cyan);}
-  .step.on.c3{background:var(--magenta); border-color:var(--magenta);}
-  .step.hit{box-shadow:0 0 12px currentColor; filter:brightness(1.35);}
-  .step.playhead{background:rgba(198,255,26,.2); border-color:rgba(198,255,26,.45);}
-  .ph-wave{
-    display:flex; align-items:flex-end; gap:2px; height:46px; margin-top:auto;
-    padding:8px; background:rgba(255,255,255,.03); border-radius:7px;
-  }
-  .ph-wave i{flex:1; background:linear-gradient(to top, var(--cyan), var(--lime)); border-radius:1px; transition:height .12s;}
-  .ph-transport{
-    display:flex; align-items:center; justify-content:space-between;
-    padding:9px 11px; background:rgba(198,255,26,.09); border:1px solid var(--line-hi);
-    border-radius:7px; font-size:9.5px; color:var(--lime); font-weight:600;
-  }
-  .ph-transport .play{display:flex; align-items:center; gap:6px;}
-  .ph-transport .tri{
-    width:0; height:0; border-left:9px solid var(--lime);
-    border-top:5.5px solid transparent; border-bottom:5.5px solid transparent;
+  ul.checks li::before{
+    content:"";position:absolute;left:4px;top:15px;
+    width:9px;height:5px;border-left:2.5px solid var(--lime);border-bottom:2.5px solid var(--lime);
+    transform:rotate(-45deg);
   }
 
-  /* ---------- SECTION BASE ---------- */
-  section{padding:88px 0; position:relative; border-bottom:1px solid var(--line);}
-  .kicker{
-    color:var(--cyan); font-size:13px; font-weight:600; margin-bottom:12px;
-    text-transform:uppercase; letter-spacing:1.6px;
-  }
-  section h2{font-size:clamp(28px,4vw,44px); max-width:700px; margin-bottom:16px;}
-  section p.section-lead{color:var(--text-dim); max-width:600px; font-size:16.5px;}
-  .center h2, .center p.section-lead{margin-left:auto; margin-right:auto;}
+  /* ---------- PREVIA DE AUDIO ---------- */
+  .demo{margin-top:28px;padding:18px;border:1px solid var(--line);border-radius:12px;background:var(--card);}
+  .demo p{font-size:14px;color:var(--dim);margin-bottom:10px;}
+  .demo audio{width:100%;}
 
-  /* ---------- DOR / PROBLEMA ---------- */
-  .pain-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:44px;}
-  .pain{
-    background:var(--bg-alt); border:1px solid var(--line); border-left:2px solid var(--cyan);
-    border-radius:var(--radius); padding:24px;
+  /* ---------- O QUE VEM ---------- */
+  .inside{margin-top:40px;}
+  .inside h2{font-size:20px;text-align:center;margin-bottom:18px;}
+  .rows{border:1px solid var(--line);border-radius:12px;overflow:hidden;}
+  .row{
+    display:flex;align-items:center;justify-content:space-between;gap:14px;
+    padding:14px 16px;border-bottom:1px solid var(--line);font-size:15.5px;
   }
-  .pain h3{font-size:15.5px; text-transform:none; letter-spacing:0; font-weight:600; margin-bottom:8px;}
-  .pain p{color:var(--text-dim); font-size:14.5px;}
-  .pain code{
-    background:rgba(255,255,255,.05); border:1px solid var(--line);
-    padding:1px 6px; border-radius:4px; font-size:12.5px; color:var(--cyan);
-    white-space:nowrap;
-  }
-  .pain-answer{
-    margin-top:32px; padding:26px 28px; border-radius:var(--radius);
-    background:linear-gradient(135deg, rgba(198,255,26,.09), rgba(34,232,213,.05));
-    border:1px solid var(--line-hi); font-size:17px;
-  }
-  .pain-answer b{color:var(--lime);}
+  .row:last-child{border-bottom:none;}
+  .row:nth-child(odd){background:rgba(255,255,255,.018);}
+  .row b{font-family:var(--display);font-weight:800;color:var(--cyan);white-space:nowrap;font-size:15px;}
 
-  /* ---------- PACK ---------- */
-  .pack-grid{display:grid; grid-template-columns:1.35fr 1fr 1fr; gap:16px; margin-top:48px;}
-  .pack-card{
-    background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:26px;
-    transition:border-color .22s, transform .22s, background .22s;
+  .compat{
+    margin-top:16px;text-align:center;font-size:14px;color:var(--dim);
+    padding:14px 16px;border:1px dashed var(--line);border-radius:12px;
   }
-  .pack-card:hover{border-color:var(--line-hi); transform:translateY(-3px); background:var(--card-hi);}
-  .pack-card.big{grid-row:span 2; display:flex; flex-direction:column; justify-content:space-between;}
-  .pack-card h3{font-size:19px; margin-bottom:9px;}
-  .pack-card p{color:var(--text-dim); font-size:14.5px;}
-  .pack-card .count{
-    font-family:'Oswald'; font-size:13px; color:var(--cyan); letter-spacing:1px;
-    display:block; margin-bottom:6px;
-  }
-  .tag{
-    display:inline-block; font-size:11.5px; font-weight:600; color:var(--lime);
-    border:1px solid var(--line-hi); background:rgba(198,255,26,.07);
-    padding:4px 11px; border-radius:20px; margin-bottom:14px; letter-spacing:.4px;
-  }
-  .waveform{display:flex; align-items:flex-end; gap:3px; height:64px; margin-top:22px;}
-  .waveform span{
-    flex:1; background:linear-gradient(to top, var(--cyan), var(--lime));
-    border-radius:2px; opacity:.85; transform-origin:bottom;
-  }
-  .pack-note{
-    margin-top:22px; font-size:13.5px; color:var(--text-dim);
-    display:flex; align-items:center; gap:9px; flex-wrap:wrap;
-  }
-  .pack-note code{
-    background:rgba(255,255,255,.05); border:1px solid var(--line);
-    padding:2px 8px; border-radius:4px; font-size:12.5px; color:var(--cyan);
-  }
+  .compat b{color:var(--text);}
 
-  /* ---------- BÔNUS ---------- */
-  .bonus{background:var(--bg-alt);}
-  .bonus-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:44px;}
-  .bonus-card{
-    border:1px dashed var(--line-hi); border-radius:var(--radius); padding:26px;
-    background:rgba(198,255,26,.035); position:relative;
-  }
-  .bonus-card .pill{
-    position:absolute; top:-11px; left:24px; background:var(--lime); color:#080c08;
-    font-size:11px; font-weight:700; padding:3px 11px; border-radius:20px; letter-spacing:.5px;
-  }
-  .bonus-card h3{font-size:16.5px; text-transform:none; letter-spacing:0; font-weight:600; margin:8px 0 8px;}
-  .bonus-card p{color:var(--text-dim); font-size:14.5px;}
+  /* ---------- FECHAMENTO ---------- */
+  .close{margin:40px 0 8px;text-align:center;}
+  .close h2{font-size:clamp(22px,5.4vw,28px);margin-bottom:20px;}
 
-  /* ---------- AUDIENCE ---------- */
-  .aud-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:44px;}
-  .aud-card{
-    border:1px solid var(--line); border-radius:var(--radius); padding:26px; background:var(--bg-alt);
-    transition:border-color .22s, transform .22s;
+  footer{
+    margin-top:40px;padding:24px 0 32px;border-top:1px solid var(--line);
+    text-align:center;font-size:13px;color:var(--dim);
   }
-  .aud-card:hover{border-color:var(--line-hi); transform:translateY(-3px);}
-  .aud-card .ico{
-    width:40px; height:40px; border-radius:9px; background:rgba(34,232,213,.1);
-    border:1px solid rgba(34,232,213,.28); display:grid; place-items:center; margin-bottom:16px;
-  }
-  .aud-card .ico svg{width:19px; height:19px; color:var(--cyan);}
-  .aud-card h3{font-size:16.5px; text-transform:none; font-weight:600; margin-bottom:8px; letter-spacing:0;}
-  .aud-card p{color:var(--text-dim); font-size:14.5px;}
-
-  /* ---------- PRICING ---------- */
-  .pricing{
-    background:
-      radial-gradient(ellipse 700px 460px at 50% 0%, rgba(198,255,26,.10), transparent 66%),
-      radial-gradient(ellipse 500px 300px at 50% 100%, rgba(34,232,213,.06), transparent 70%);
-  }
-  .price-box{
-    max-width:520px; margin:22px auto 0; background:var(--card);
-    border:1px solid var(--line-hi); border-radius:14px; padding:42px 36px; text-align:center;
-    box-shadow:0 24px 70px rgba(0,0,0,.5), 0 0 60px rgba(198,255,26,.08);
-    position:relative;
-  }
-  .price-box .ribbon{
-    position:absolute; top:-13px; left:50%; transform:translateX(-50%);
-    background:var(--lime); color:#080c08; font-size:12px; font-weight:700;
-    padding:5px 16px; border-radius:20px; white-space:nowrap; letter-spacing:.4px;
-  }
-  .price-box .now{font-family:'Oswald'; font-size:66px; color:var(--lime); margin:6px 0 2px; line-height:1;}
-  .price-box .now sup{font-size:24px; vertical-align:top; margin-right:2px;}
-  .price-box .installment{color:var(--text-dim); font-size:14px;}
-  .price-box ul{list-style:none; text-align:left; margin:26px 0; font-size:14.5px; color:var(--text-dim);}
-  .price-box li{padding:9px 0; border-bottom:1px solid var(--line); display:flex; gap:11px; align-items:flex-start;}
-  .price-box li:last-child{border-bottom:none;}
-  .price-box li::before{content:"✓"; color:var(--lime); font-weight:700; flex-shrink:0;}
-  .price-box .btn-primary{width:100%;}
-  .pay-icons{
-    display:flex; align-items:center; justify-content:center; gap:14px; margin-top:16px;
-    font-size:12px; color:var(--text-dim); flex-wrap:wrap;
-  }
-  .pay-icons span{
-    border:1px solid var(--line); padding:4px 10px; border-radius:5px; letter-spacing:.3px;
-  }
-  /* ---------- CTA FINAL ---------- */
-  .final{
-    text-align:center; border-bottom:none;
-    background:radial-gradient(ellipse 800px 400px at 50% 50%, rgba(198,255,26,.09), transparent 68%);
-  }
-  .final h2{font-size:clamp(30px,4.6vw,50px); margin:0 auto 18px;}
-  .final p{color:var(--text-dim); font-size:17px; max-width:520px; margin:0 auto 32px;}
-
-  /* ---------- FOOTER ---------- */
-  footer{padding:44px 0 110px; color:var(--text-dim); font-size:13px; border-top:1px solid var(--line);}
-  footer .wrap{display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap; align-items:center;}
-  footer nav{display:flex; gap:20px;}
+  footer a{color:var(--dim);text-decoration:underline;text-underline-offset:3px;}
   footer a:hover{color:var(--lime);}
 
-  /* ---------- STICKY MOBILE CTA ---------- */
-  .sticky-cta{
-    position:fixed; left:0; right:0; bottom:0; z-index:70;
-    background:rgba(8,12,8,.94); backdrop-filter:blur(12px);
-    border-top:1px solid var(--line-hi);
-    padding:11px 16px calc(11px + env(safe-area-inset-bottom));
-    display:none; align-items:center; gap:14px;
-    transform:translateY(110%); transition:transform .3s ease;
+  /* ---------- BARRA FIXA (celular) ---------- */
+  .sticky{
+    position:fixed;left:0;right:0;bottom:0;z-index:50;
+    display:flex;align-items:center;gap:12px;
+    padding:10px 16px calc(10px + env(safe-area-inset-bottom));
+    background:rgba(10,13,10,.96);backdrop-filter:blur(10px);
+    border-top:1px solid var(--line);
   }
-  .sticky-cta.show{transform:translateY(0);}
-  .sticky-cta .p{flex:1; min-width:0;}
-  .sticky-cta .p b{font-family:'Oswald'; font-size:23px; color:var(--lime); display:block; line-height:1;}
-  .sticky-cta .p span{font-size:11.5px; color:var(--text-dim);}
-  .sticky-cta .btn-primary{padding:13px 22px; font-size:15px; white-space:nowrap;}
+  .sticky .p{flex:1;min-width:0;line-height:1.2;}
+  .sticky .p b{font-family:var(--display);font-weight:800;font-size:22px;color:var(--lime);display:block;}
+  .sticky .p span{font-size:11.5px;color:var(--dim);}
+  .sticky .cta{width:auto;margin:0;padding:14px 22px;font-size:16px;flex-shrink:0;}
 
-  /* ---------- REVEAL ---------- */
-  .reveal{opacity:0; transform:translateY(22px); transition:opacity .6s ease, transform .6s ease;}
-  .reveal.in{opacity:1; transform:none;}
-
-  /* ---------- RESPONSIVE ---------- */
-  @media (max-width:980px){
-    .hero-grid{grid-template-columns:1fr; gap:48px;}
-    .phone{max-width:250px;}
-    nav.main{display:none;}
-    .pack-grid{grid-template-columns:1fr 1fr;}
-    .pack-card.big{grid-row:auto; grid-column:1 / -1;}
+  @media (min-width:700px){
+    body{padding-bottom:0;}
+    .sticky{display:none;}
+    .hero{padding:56px 0 8px;}
+    .buy{padding:30px;}
+    .cta{width:auto;min-width:340px;margin-left:auto;margin-right:auto;}
   }
-  @media (max-width:760px){
-    .wrap{padding:0 18px;}
-    section[id]{scroll-margin-top:60px;}
-
-    /* header mais baixo + navegacao por secoes */
-    header .wrap{height:56px; gap:12px;}
-    .logo{font-size:16px;}
-    .nav-cta{padding:9px 15px; font-size:13px;}
-    .navstrip{display:flex;}
-
-    /* tipografia: o desktop era grande demais em tela pequena */
-    .hero h1{font-size:clamp(27px, 7.4vw, 36px);}
-    .hero p.lead{font-size:15.5px; margin-top:16px;}
-    section h2{font-size:clamp(22px, 5.8vw, 30px);}
-    section p.section-lead{font-size:15px;}
-    .kicker{font-size:11.5px; letter-spacing:1.2px; margin-bottom:8px;}
-
-    /* respiro vertical menor: menos rolagem ate o preco */
-    section{padding:46px 0;}
-    .hero{padding:32px 0 42px;}
-    .hero-grid{gap:32px;}
-
-    /* cards mais compactos */
-    .pack-grid, .aud-grid, .pain-grid, .bonus-grid{grid-template-columns:1fr; gap:12px;}
-    .pack-card, .aud-card, .pain, .bonus-card{padding:20px;}
-    .pack-card h3{font-size:17px;}
-    .pack-card p, .aud-card p, .pain p, .bonus-card p{font-size:14px;}
-    .aud-card .ico{width:34px; height:34px; margin-bottom:12px;}
-    .waveform{height:48px;}
-    .pain-answer{padding:20px; font-size:15.5px; margin-top:24px;}
-
-    /* stats do hero em 3 colunas curtas, sem quebrar linha */
-    .hero-meta{grid-template-columns:repeat(3,1fr); gap:12px; margin-top:26px; padding-top:18px;}
-    .hero-meta .n{font-size:20px;}
-    .hero-meta .l{font-size:11px; max-width:none; margin-top:4px;}
-
-    /* botoes com area de toque cheia */
-    .cta-row{gap:10px; margin-top:24px;}
-    .cta-row .btn-primary, .cta-row .btn-ghost{width:100%;}
-    .btn-primary{padding:15px 22px; font-size:15.5px;}
-    .btn-ghost{padding:14px 22px; font-size:14px;}
-    .trust-row{gap:10px 14px; margin-top:20px; font-size:12.5px;}
-
-    /* mockup ocupava meia tela sem vender nada */
-    .phone{max-width:196px;}
-
-    /* bloco de preco */
-    .price-box{padding:28px 18px; border-radius:12px;}
-    .price-box .now{font-size:52px;}
-    .price-box ul{margin:20px 0; font-size:14px;}
-
-
-    footer{text-align:center; padding:32px 0 96px;}
-    footer .wrap{justify-content:center;}
-    .sticky-cta{display:flex;}
-  }
-
-  @media (max-width:400px){
-    .hero-meta{grid-template-columns:1fr 1fr;}
-    .price-box .now{font-size:46px;}
-    .sticky-cta .p b{font-size:20px;}
-    .sticky-cta .btn-primary{padding:12px 16px; font-size:14px;}
-  }
-
-  :focus-visible{outline:2px solid var(--cyan); outline-offset:3px; border-radius:3px;}
-  @media (prefers-reduced-motion: reduce){
-    html{scroll-behavior:auto;}
-    .reveal{opacity:1; transform:none; transition:none;}
-    *{animation-duration:.001ms !important; transition-duration:.001ms !important;}
-  }
+  :focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:4px;}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;}}
 </style>
 </head>
 <body>
 
-<header>
+<div class="bar">
   <div class="wrap">
-    <a href="#top" class="logo">PACK <span>ELETROFUNK</span></a>
-    <nav class="main">
-      <a href="#pack">O pack</a>
-      <a href="#compatibilidade">Onde funciona</a>
-      <a href="#preco">Preço</a>
-    </nav>
-    <a href="#preco" class="nav-cta" data-cta="header">Comprar</a>
+    <span class="brand">PACK <span>ELETROFUNK</span></span>
+    <span>120+ samples · R$ 45</span>
   </div>
-</header>
+</div>
 
-<nav class="navstrip" aria-label="Seções da página">
-  <a href="#pack">O pack</a>
-  <a href="#organizacao">Organização</a>
-  <a href="#compatibilidade">Onde funciona</a>
-  <a href="#extras">Vem junto</a>
-  <a href="#preco">Preço</a>
-</nav>
+<main class="wrap">
 
-<main id="top">
+  <section class="hero">
+    <span class="eyebrow">FL Studio Mobile e PC</span>
+    <h1>120+ samples de eletrofunk <em>prontos pra usar</em></h1>
+    <p class="sub">Baixe, arraste pro seu projeto e comece a produzir hoje. No celular ou no computador.</p>
+  </section>
 
-<!-- ============ HERO ============ -->
-<section class="hero">
-  <div class="wrap">
-    <div class="hero-grid">
-      <div>
-        <h1>Samples de eletrofunk <em>prontos pra usar</em> no FL Studio</h1>
-        <p class="lead">120+ arquivos em WAV: kicks, caixas, 808, vocal chops, FX e loops de melodia. Cada som separado por pasta, com BPM e tom no nome do arquivo. Funciona no FL Studio Mobile, no FL Studio do computador e em qualquer outra DAW.</p>
-
-        <div class="cta-row">
-          <a href="#preco" class="btn-primary" data-cta="hero">
-            Comprar o pack por R$ 45
-            <span class="sub">pagamento único • download imediato</span>
-          </a>
-          <a href="#pack" class="btn-ghost">Ver o que vem</a>
-        </div>
-
-        <div class="trust-row">
-          <span class="item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-            Download imediato
-          </span>
-          <span class="item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-            WAV 44.1kHz
-          </span>
-          <span class="item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-            Uso livre nas suas faixas
-          </span>
-        </div>
-
-        <div class="hero-meta">
-          <div><p class="n">120+</p><p class="l">arquivos em WAV 44.1kHz</p></div>
-          <div><p class="n">5</p><p class="l">categorias, cada uma na sua pasta</p></div>
-          <div><p class="n">R$ 45</p><p class="l">pagamento único, sem mensalidade</p></div>
-        </div>
-      </div>
-
-      <!-- Mockup animado de step sequencer -->
-      <div class="phone" aria-hidden="true">
-        <div class="phone-screen">
-          <div class="ph-top"><b>FL STUDIO</b><span>145 BPM</span></div>
-          <div class="seq" id="seq"></div>
-          <div class="ph-wave" id="wave"></div>
-          <div class="ph-transport">
-            <span class="play"><i class="tri"></i> TOCANDO</span>
-            <span>PATTERN 01 — ELETROFUNK</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ O QUE VEM ============ -->
-<section id="pack">
-  <div class="wrap">
-    <p class="kicker">O que vem</p>
-    <h2>120+ samples de eletrofunk divididos em cinco categorias</h2>
-    <p class="section-lead">Bateria, grave, voz, efeito e melodia. Cada categoria na sua pasta, com o nome do arquivo dizendo o que é, em que tom está e em quantos BPM foi feito.</p>
-
-    <div class="pack-grid">
-      <div class="pack-card big reveal">
-        <div>
-          <span class="tag">12 kits</span>
-          <h3>Kits de bateria</h3>
-          <p>Bumbo, caixa e percussão já afinados e com o ganho equalizado entre si. Cada kit vem em duas formas: o loop montado, pra jogar direto na timeline, e os one-shots soltos, pra montar a batida do seu jeito no step sequencer.</p>
-        </div>
-        <div class="waveform" id="heroWave">
-          <span style="height:40%"></span><span style="height:70%"></span><span style="height:30%"></span>
-          <span style="height:90%"></span><span style="height:55%"></span><span style="height:75%"></span>
-          <span style="height:35%"></span><span style="height:60%"></span><span style="height:85%"></span>
-          <span style="height:45%"></span><span style="height:65%"></span><span style="height:30%"></span>
-          <span style="height:80%"></span><span style="height:50%"></span><span style="height:38%"></span>
-        </div>
-      </div>
-      <div class="pack-card reveal">
-        <span class="count">40 arquivos</span>
-        <h3>Vocal chops</h3>
-        <p>Cortes de voz já processados e afinados, em várias tonalidades, com o tom indicado no nome do arquivo.</p>
-      </div>
-      <div class="pack-card reveal">
-        <span class="count">30 arquivos</span>
-        <h3>Graves e 808</h3>
-        <p>Sub-bass e 808 com ataque limpo e sustain longo, desenhados pra segurar o grave sem estourar na saída.</p>
-      </div>
-      <div class="pack-card reveal">
-        <span class="count">28 arquivos</span>
-        <h3>FX e transições</h3>
-        <p>Risers, impactos, reversos e ruídos pra marcar virada, entrada de drop e passagem entre partes.</p>
-      </div>
-      <div class="pack-card reveal">
-        <span class="count">25 arquivos</span>
-        <h3>Loops de melodia</h3>
-        <p>Synths, teclados e arpejos com BPM e tom no nome, prontos pra encaixar por cima da batida.</p>
-      </div>
+  <section class="buy">
+    <div class="price">
+      <span class="num"><sup>R$</sup>45</span>
+      <span class="once">pagamento único<br>sem mensalidade</span>
     </div>
 
-    <p class="pack-note">
-      Formato <code>.WAV 44.1kHz</code> · entregue em <code>.zip</code> único · pastas nomeadas por tipo, BPM e tom.
-    </p>
-  </div>
-</section>
+    <a href="https://pay.kiwify.com.br/a0GKsLJ" class="cta" data-cta="topo">Comprar agora</a>
+    <p class="under">Pix, cartão ou boleto · <b>download na hora</b></p>
 
-<!-- ============ ORGANIZAÇÃO ============ -->
-<section id="organizacao">
-  <div class="wrap">
-    <p class="kicker">Como foi montado</p>
-    <h2>Arquivo nomeado, nível equalizado, nada pra adivinhar</h2>
-    <p class="section-lead">Boa parte do tempo de produção some procurando som e corrigindo volume. O pack foi preparado pra você pular essa parte.</p>
-    <div class="pain-grid">
-      <div class="pain reveal">
-        <h3>Nome que já diz tudo</h3>
-        <p>Cada arquivo traz tipo, BPM e tom no nome — por exemplo, <code>melodia_130bpm_Fm.wav</code>. Dá pra achar o que precisa pelo próprio navegador do FL Studio.</p>
-      </div>
-      <div class="pain reveal">
-        <h3>Volume equalizado</h3>
-        <p>Todos os sons passaram pelo mesmo tratamento de ganho e corte de graves inúteis. Você empilha as camadas sem um som cobrir o outro nem estourar o master.</p>
-      </div>
-      <div class="pain reveal">
-        <h3>Loop e one-shot separados</h3>
-        <p>Quem quer velocidade usa o loop pronto. Quem quer montar do zero usa os one-shots. Os dois vêm no mesmo kit, em pastas diferentes.</p>
-      </div>
+    <ul class="checks">
+      <li>120+ arquivos <b>.WAV</b>, separados por pasta</li>
+      <li>BPM e tom no nome de cada arquivo</li>
+      <li>Funciona no FL Studio Mobile, no PC e em qualquer DAW</li>
+      <li>Uso livre nas suas faixas, sets e lançamentos</li>
+    </ul>
+  </section>
+
+  <!-- Previa: suba um demo.mp3 na raiz do projeto. Sem o arquivo, o bloco some sozinho. -->
+  <section class="demo" id="demo" hidden>
+    <p>Ouça um trecho feito só com sons do pack:</p>
+    <audio id="demoAudio" controls preload="none" src="/demo.mp3"></audio>
+  </section>
+
+  <section class="inside">
+    <h2>O que vem dentro</h2>
+    <div class="rows">
+      <div class="row"><span>Kits de bateria (loop + one-shots)</span><b>12 kits</b></div>
+      <div class="row"><span>Vocal chops afinados</span><b>40 sons</b></div>
+      <div class="row"><span>Graves e 808</span><b>30 sons</b></div>
+      <div class="row"><span>FX e transições</span><b>28 sons</b></div>
+      <div class="row"><span>Loops de melodia</span><b>25 loops</b></div>
     </div>
-    <div class="pain-answer reveal">
-      <b>Sem instalação:</b> é arquivo <b>.WAV</b> comum dentro de um <b>.zip</b>. Você extrai, aponta a pasta pro FL Studio e os sons aparecem no navegador — no celular e no computador.
-    </div>
-  </div>
-</section>
+    <p class="compat">Arquivos <b>.WAV 44.1kHz</b> num <b>.zip</b> único — sem instalar nada.</p>
+  </section>
 
-<!-- ============ COMPATIBILIDADE ============ -->
-<section id="compatibilidade">
-  <div class="wrap">
-    <p class="kicker">Onde funciona</p>
-    <h2>O mesmo pack no celular e no computador</h2>
-    <p class="section-lead">Você compra uma vez e usa nos dois. É o mesmo conjunto de arquivos, com a mesma organização de pastas.</p>
-    <div class="aud-grid">
-      <div class="aud-card reveal">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg></div>
-        <h3>FL Studio Mobile</h3>
-        <p>Baixe o .zip no celular, extraia e mova a pasta pro diretório do app. Os samples aparecem no navegador de arquivos, prontos pra arrastar pro pattern.</p>
-      </div>
-      <div class="aud-card reveal">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-        <h3>FL Studio no PC</h3>
-        <p>Extraia o .zip e adicione a pasta como pasta de samples no Browser do FL Studio. Ela fica salva na sua lista e vale pra todos os projetos.</p>
-      </div>
-      <div class="aud-card reveal">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M9 20V4M14 20v-8M19 20V7"/></svg></div>
-        <h3>Qualquer outra DAW</h3>
-        <p>São WAV comuns, sem plugin nem formato proprietário: BandLab, Ableton, Reaper, Studio One, Caustic ou o que você já usa.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ VEM JUNTO ============ -->
-<section id="extras" class="bonus">
-  <div class="wrap">
-    <p class="kicker">Vem junto</p>
-    <h2>Três coisas incluídas no mesmo pagamento</h2>
-    <div class="bonus-grid">
-      <div class="bonus-card reveal">
-        <span class="pill">INCLUSO</span>
-        <h3>Projeto de exemplo</h3>
-        <p>Um projeto montado com os samples do pack, pra você abrir e ver como as camadas foram empilhadas. Vem na versão do FL Studio Mobile e na do computador.</p>
-      </div>
-      <div class="bonus-card reveal">
-        <span class="pill">INCLUSO</span>
-        <h3>Licença de uso livre</h3>
-        <p>Pode usar em faixas próprias, sets, remix e lançamento comercial, sem royalties e sem precisar creditar. O que não pode é revender os samples soltos.</p>
-      </div>
-      <div class="bonus-card reveal">
-        <span class="pill">INCLUSO</span>
-        <h3>Atualizações do pack</h3>
-        <p>Todo lote novo de samples que entrar no pack cai no mesmo link de download que você já tem. Sem pagar de novo.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ PARA QUEM ============ -->
-<section id="para-quem">
-  <div class="wrap">
-    <p class="kicker">Pra quem é</p>
-    <h2>Pra quem já produz e quer parar de garimpar sample solto</h2>
-    <div class="pain-grid">
-      <div class="pain reveal">
-        <h3>Quem produz no celular</h3>
-        <p>Pastas curtas e nomes claros, pensados pro navegador de arquivos do FL Studio Mobile — em vez de centenas de arquivos jogados numa pasta só.</p>
-      </div>
-      <div class="pain reveal">
-        <h3>Quem produz no PC</h3>
-        <p>Mesmos arquivos e mesmo padrão de nome. Você adiciona a pasta no Browser uma vez e ela fica disponível em qualquer projeto.</p>
-      </div>
-      <div class="pain reveal">
-        <h3>DJs e equipes de som</h3>
-        <p>Material pra montar faixa própria e ter algo que não é o mesmo loop que já rodou na mão de todo mundo.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ PREÇO ============ -->
-<section id="preco" class="pricing center">
-  <div class="wrap">
-    <p class="kicker">Preço</p>
-    <h2>O pack completo por R$ 45</h2>
-    <p class="section-lead">Pagamento único. Sem mensalidade, sem renovação e sem limite de uso.</p>
-
-    <div class="price-box reveal">
-      <span class="ribbon">PAGAMENTO ÚNICO</span>
-      <p class="now"><sup>R$</sup>45</p>
-      <p class="installment">à vista no Pix · ou parcelado no cartão</p>
-      <ul>
-        <li>120+ samples e loops de eletrofunk em WAV 44.1kHz</li>
-        <li>5 categorias separadas por pasta, com BPM e tom no nome</li>
-        <li>Projeto de exemplo pro FL Studio Mobile e pro PC</li>
-        <li>Licença livre pra faixas próprias, sets e lançamentos</li>
-        <li>Atualizações do pack sem pagar de novo</li>
-        <li>Download imediato e acesso vitalício ao link</li>
-      </ul>
-      <a href="https://pay.kiwify.com.br/a0GKsLJ" class="btn-primary" data-cta="pricing">
-        Comprar o pack agora
-        <span class="sub">link de download liberado no e-mail</span>
-      </a>
-      <div class="pay-icons"><span>PIX</span><span>CARTÃO</span><span>BOLETO</span><span>🔒 Pagamento seguro</span></div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ============ CTA FINAL ============ -->
-<section class="final">
-  <div class="wrap">
-    <h2>Os sons já estão prontos. Falta abrir o FL Studio.</h2>
-    <p>120+ samples organizados por pasta, com BPM e tom no nome, prontos pra arrastar pro seu projeto no celular ou no computador.</p>
-    <a href="#preco" class="btn-primary" data-cta="final">
-      Comprar o pack por R$ 45
-      <span class="sub">pagamento único • download imediato</span>
-    </a>
-  </div>
-</section>
+  <section class="close">
+    <h2>Pega o pack e vai produzir</h2>
+    <a href="https://pay.kiwify.com.br/a0GKsLJ" class="cta" data-cta="final">Comprar por R$ 45</a>
+    <p class="under">Acesso liberado no e-mail logo após o pagamento</p>
+  </section>
 
 </main>
 
 <footer>
   <div class="wrap">
-    <p>© <span id="year">2026</span> Pack Eletrofunk — samples para FL Studio Mobile e PC.</p>
-    <nav>
-      <a href="/termos">Termos e licença</a>
-    </nav>
+    <p>Pagamento processado pela Kiwify · <a href="/termos">Termos e licença</a></p>
+    <p style="margin-top:8px;">© <span id="year">2026</span> Pack Eletrofunk</p>
   </div>
 </footer>
 
-<!-- Barra fixa de CTA no mobile -->
-<div class="sticky-cta" id="stickyCta">
-  <div class="p"><b>R$ 45</b><span>pagamento único · download imediato</span></div>
-  <a href="#preco" class="btn-primary" data-cta="sticky">Comprar</a>
+<div class="sticky">
+  <div class="p"><b>R$ 45</b><span>pagamento único</span></div>
+  <a href="https://pay.kiwify.com.br/a0GKsLJ" class="cta" data-cta="fixa">Comprar</a>
 </div>
 
-<!-- Dados estruturados do produto (rich results no Google) -->
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
   "@type":"Product",
   "name":"Pack de Samples de Eletrofunk",
-  "description":"Pack com mais de 120 samples de eletrofunk em WAV 44.1kHz: kits de bateria, graves e 808, vocal chops, FX e loops de melodia, organizados por pasta com BPM e tom no nome. Compatível com FL Studio Mobile, FL Studio no PC e qualquer DAW.",
+  "description":"Pack com mais de 120 samples de eletrofunk em WAV 44.1kHz: kits de bateria, graves e 808, vocal chops, FX e loops de melodia. Compatível com FL Studio Mobile, FL Studio no PC e qualquer DAW.",
   "brand":{"@type":"Brand","name":"Pack Eletrofunk"},
-  "category":"Sample pack de produção musical",
   "offers":{
     "@type":"Offer",
     "price":"45.00",
     "priceCurrency":"BRL",
     "availability":"https://schema.org/InStock",
-    "url":"https://eletrofunk-gyn.vercel.app/#preco"
+    "url":"https://pay.kiwify.com.br/a0GKsLJ"
   }
 }
 </script>
 
-
 <script>
 (function(){
   "use strict";
-  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-  /* ---- ano no rodapé ---- */
   document.getElementById("year").textContent = new Date().getFullYear();
 
-  /* ---- reveal on scroll ---- */
-  var revealEls = document.querySelectorAll(".reveal");
-  if(reduced || !("IntersectionObserver" in window)){
-    revealEls.forEach(function(el){ el.classList.add("in"); });
-  } else {
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(en){
-        if(en.isIntersecting){ en.target.classList.add("in"); io.unobserve(en.target); }
-      });
-    }, {rootMargin:"0px 0px -60px 0px", threshold:0.12});
-    revealEls.forEach(function(el, i){
-      el.style.transitionDelay = (i % 3) * 90 + "ms";
-      io.observe(el);
-    });
+  /* Previa de audio: so aparece se o demo.mp3 existir de verdade. */
+  var demo = document.getElementById("demo"), a = document.getElementById("demoAudio");
+  if(demo && a){
+    fetch(a.getAttribute("src"), {method:"HEAD"})
+      .then(function(r){ if(r.ok) demo.hidden = false; })
+      .catch(function(){});
   }
 
-  /* ---- barra fixa mobile: aparece depois do hero, some no bloco de preço ---- */
-  var sticky = document.getElementById("stickyCta");
-  var priceSection = document.getElementById("preco");
-  function onScroll(){
-    var past = window.scrollY > window.innerHeight * 0.7;
-    var r = priceSection.getBoundingClientRect();
-    var inPrice = r.top < window.innerHeight && r.bottom > 0;
-    sticky.classList.toggle("show", past && !inPrice);
-  }
-  window.addEventListener("scroll", onScroll, {passive:true});
-  onScroll();
-
-  /* ---- step sequencer animado do mockup ---- */
-  var seq = document.getElementById("seq");
-  var wave = document.getElementById("wave");
-  if(seq){
-    var tracks = [
-      {name:"KICK",  cls:"",   pat:[1,0,0,1,0,0,1,0]},
-      {name:"CAIXA", cls:"c2", pat:[0,0,1,0,0,1,0,1]},
-      {name:"808",   cls:"c3", pat:[1,0,1,0,1,0,0,1]},
-      {name:"VOCAL", cls:"c2", pat:[0,1,0,0,1,0,0,0]},
-      {name:"FX",    cls:"",   pat:[0,0,0,0,0,0,1,0]}
-    ];
-    var cells = [];
-    tracks.forEach(function(t){
-      var row = document.createElement("div");
-      row.className = "seq-row";
-      var nm = document.createElement("span");
-      nm.className = "nm"; nm.textContent = t.name;
-      var steps = document.createElement("div");
-      steps.className = "steps";
-      var rowCells = [];
-      t.pat.forEach(function(on){
-        var s = document.createElement("i");
-        s.className = "step" + (on ? " on " + t.cls : "");
-        steps.appendChild(s);
-        rowCells.push({el:s, on:!!on});
-      });
-      cells.push(rowCells);
-      row.appendChild(nm); row.appendChild(steps);
-      seq.appendChild(row);
-    });
-
-    var bars = [];
-    for(var b=0; b<26; b++){
-      var i2 = document.createElement("i");
-      i2.style.height = "20%";
-      wave.appendChild(i2);
-      bars.push(i2);
-    }
-
-    if(!reduced){
-      var step = 0;
-      setInterval(function(){
-        if(document.hidden) return;
-        var prev = (step + 7) % 8;
-        cells.forEach(function(row){
-          var c = row[step], p = row[prev];
-          p.el.classList.remove("hit","playhead");
-          if(!p.on) p.el.classList.remove("playhead");
-          if(c.on) c.el.classList.add("hit");
-          else c.el.classList.add("playhead");
-        });
-        var energy = cells.reduce(function(a,row){ return a + (row[step].on ? 1 : 0); }, 0);
-        bars.forEach(function(bar){
-          var h = 14 + Math.random() * (18 + energy * 21);
-          bar.style.height = Math.min(h, 100) + "%";
-        });
-        step = (step + 1) % 8;
-      }, 190);
-    }
-  }
-
-  /* ---- waveform do card de destaque respirando ---- */
-  var hw = document.getElementById("heroWave");
-  if(hw && !reduced){
-    var hbars = hw.querySelectorAll("span");
-    setInterval(function(){
-      if(document.hidden) return;
-      hbars.forEach(function(bar){
-        bar.style.transition = "height .35s ease";
-        bar.style.height = (25 + Math.random()*70) + "%";
-      });
-    }, 620);
-  }
-
-  /* ---- hook de analytics nos CTAs (plugue GA4/Meta Pixel aqui) ---- */
+  /* Eventos de compra (plugue GA4 / Meta Pixel no <head>). */
   document.querySelectorAll("[data-cta]").forEach(function(el){
     el.addEventListener("click", function(){
-      var where = el.getAttribute("data-cta");
       if(typeof window.gtag === "function"){
-        window.gtag("event", "click_cta", {cta_location: where});
+        window.gtag("event","click_comprar",{cta_location: el.getAttribute("data-cta")});
       }
       if(typeof window.fbq === "function"){
-        window.fbq("track", "InitiateCheckout", {content_name: "Pack Eletrofunk", value: 45, currency: "BRL"});
+        window.fbq("track","InitiateCheckout",{content_name:"Pack Eletrofunk",value:45,currency:"BRL"});
       }
     });
   });
