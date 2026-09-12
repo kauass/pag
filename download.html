@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baixar o pack | Pack Eletrofunk</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0a0d0a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230a0d0a'/%3E%3Cg fill='%23c6ff1a'%3E%3Crect x='18' y='42' width='9' height='16' rx='4'/%3E%3Crect x='33' y='28' width='9' height='44' rx='4'/%3E%3Crect x='48' y='16' width='9' height='68' rx='4'/%3E%3Crect x='63' y='34' width='9' height='32' rx='4'/%3E%3Crect x='78' y='46' width='9' height='8' rx='4'/%3E%3C/g%3E%3C/svg%3E">
+<style>
+  :root{
+    --bg:#0a0d0a; --card:#121a14; --line:rgba(230,255,235,.12);
+    --lime:#c6ff1a; --cyan:#22e8d5; --text:#eaf6ef; --dim:#8fa697;
+    --display:system-ui,-apple-system,"Segoe UI Variable Display","Segoe UI",Roboto,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    background:var(--bg);color:var(--text);
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    line-height:1.6;-webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;}
+  .wrap{max-width:520px;margin:0 auto;padding:0 20px;}
+  .bar{border-bottom:1px solid var(--line);padding:14px 0;}
+  .brand{font-family:var(--display);font-weight:800;font-size:15px;text-transform:uppercase;letter-spacing:.02em;text-decoration:none;}
+  .brand span{color:var(--lime);}
+
+  h1{font-family:var(--display);font-weight:800;font-size:28px;letter-spacing:-.02em;line-height:1.1;margin:40px 0 10px;}
+  .lead{color:var(--dim);font-size:16px;}
+
+  form{margin-top:24px;padding:22px 20px;background:var(--card);border:1px solid var(--line);border-radius:14px;}
+  label{display:block;font-size:14px;font-weight:600;margin-bottom:8px;}
+  input{
+    width:100%;padding:15px 14px;font-size:16px; /* 16px evita o zoom do iOS */
+    background:#0a0f0b;color:var(--text);
+    border:1px solid var(--line);border-radius:9px;
+  }
+  input:focus{outline:2px solid var(--cyan);outline-offset:1px;}
+  button{
+    width:100%;margin-top:14px;border:none;cursor:pointer;
+    background:var(--lime);color:#0a0d0a;
+    font-family:var(--display);font-weight:800;font-size:17px;
+    padding:16px;border-radius:10px;
+  }
+  button[disabled]{opacity:.6;cursor:progress;}
+  .dica{margin-top:12px;font-size:13px;color:var(--dim);}
+
+  .aviso{margin-top:16px;padding:14px 16px;border-radius:10px;font-size:14.5px;display:none;}
+  .aviso.erro{display:block;background:rgba(255,61,110,.09);border:1px solid rgba(255,61,110,.35);color:#ffc2d3;}
+
+  .arquivos{margin-top:22px;display:none;}
+  .arquivos h2{font-family:var(--display);font-weight:800;font-size:19px;margin-bottom:12px;}
+  .arquivos ol{list-style:none;border:1px solid var(--line);border-radius:12px;overflow:hidden;}
+  .arquivos li{border-bottom:1px solid var(--line);}
+  .arquivos li:last-child{border-bottom:none;}
+  .arquivos a{
+    display:flex;align-items:center;justify-content:space-between;gap:12px;
+    padding:15px 16px;text-decoration:none;font-size:15.5px;
+  }
+  .arquivos a:hover{background:rgba(198,255,26,.06);}
+  .arquivos a span.baixar{color:var(--lime);font-weight:700;font-size:14px;white-space:nowrap;}
+
+  footer{margin-top:40px;padding:22px 0 40px;border-top:1px solid var(--line);font-size:13px;color:var(--dim);text-align:center;}
+  footer a{color:var(--dim);}
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <div class="wrap"><a href="/" class="brand">PACK <span>ELETROFUNK</span></a></div>
+</div>
+
+<main class="wrap">
+  <h1>Baixar o seu pack</h1>
+  <p class="lead">Digite o e-mail que você usou na hora da compra. A gente confirma o pagamento e libera os arquivos aqui mesmo.</p>
+
+  <form id="form">
+    <label for="email">E-mail da compra</label>
+    <input type="email" id="email" name="email" required autocomplete="email"
+           inputmode="email" placeholder="seu@email.com">
+    <button type="submit" id="botao">Liberar meu download</button>
+    <p class="dica">Tem que ser o mesmo e-mail digitado no checkout. Pagou no boleto? A liberação sai quando o banco compensa.</p>
+  </form>
+
+  <div class="aviso" id="aviso"></div>
+
+  <section class="arquivos" id="arquivos">
+    <h2>Seu pack está liberado</h2>
+    <ol id="lista"></ol>
+    <p class="dica">Baixe um arquivo por vez. No celular, se algum download falhar, é só repetir aquele — os outros continuam valendo.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Problema com o acesso? Responda o e-mail da compra que a gente resolve.</p>
+    <p style="margin-top:6px;"><a href="/termos">Termos e licença</a></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var form = document.getElementById("form");
+  var botao = document.getElementById("botao");
+  var aviso = document.getElementById("aviso");
+  var bloco = document.getElementById("arquivos");
+  var lista = document.getElementById("lista");
+
+  function erro(msg){
+    aviso.className = "aviso erro";
+    aviso.textContent = msg;
+  }
+
+  form.addEventListener("submit", function(ev){
+    ev.preventDefault();
+    aviso.className = "aviso";
+    bloco.style.display = "none";
+    botao.disabled = true;
+    botao.textContent = "Conferindo...";
+
+    fetch("/api/liberar", {
+      method: "POST",
+      headers: {"Content-Type":"application/json"},
+      body: JSON.stringify({email: document.getElementById("email").value})
+    })
+    .then(function(r){ return r.json().then(function(j){ return {ok:r.ok, j:j}; }); })
+    .then(function(res){
+      if(!res.ok || !res.j.ok){
+        erro(res.j.erro || "Nao conseguimos liberar agora. Tente de novo.");
+        return;
+      }
+      lista.innerHTML = "";
+      res.j.arquivos.forEach(function(a){
+        var li = document.createElement("li");
+        var link = document.createElement("a");
+        link.href = a.url;
+        link.setAttribute("rel", "noopener");
+        var nome = document.createElement("span");
+        nome.textContent = a.nome;
+        var acao = document.createElement("span");
+        acao.className = "baixar";
+        acao.textContent = "Baixar";
+        link.appendChild(nome); link.appendChild(acao);
+        li.appendChild(link); lista.appendChild(li);
+      });
+      form.style.display = "none";
+      bloco.style.display = "block";
+    })
+    .catch(function(){ erro("Sem conexao com o servidor. Tente de novo."); })
+    .finally(function(){
+      botao.disabled = false;
+      botao.textContent = "Liberar meu download";
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
