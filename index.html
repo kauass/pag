@@ -108,24 +108,6 @@
   .demo p{font-size:14px;color:var(--dim);margin-bottom:10px;}
   .demo audio{width:100%;}
 
-  /* ---------- O QUE VEM ---------- */
-  .inside{margin-top:40px;}
-  .inside h2{font-size:20px;text-align:center;margin-bottom:18px;}
-  .rows{border:1px solid var(--line);border-radius:12px;overflow:hidden;}
-  .row{
-    display:flex;align-items:center;justify-content:space-between;gap:14px;
-    padding:14px 16px;border-bottom:1px solid var(--line);font-size:15.5px;
-  }
-  .row:last-child{border-bottom:none;}
-  .row:nth-child(odd){background:rgba(255,255,255,.018);}
-  .row b{font-family:var(--display);font-weight:800;color:var(--cyan);white-space:nowrap;font-size:15px;}
-
-  .compat{
-    margin-top:16px;text-align:center;font-size:14px;color:var(--dim);
-    padding:14px 16px;border:1px dashed var(--line);border-radius:12px;
-  }
-  .compat b{color:var(--text);}
-
   /* ---------- FECHAMENTO ---------- */
   .close{margin:40px 0 8px;text-align:center;}
   .close h2{font-size:clamp(22px,5.4vw,28px);margin-bottom:20px;}
@@ -166,7 +148,6 @@
 <div class="bar">
   <div class="wrap">
     <span class="brand">PACK <span>ELETROFUNK</span></span>
-    <span>120+ samples · R$ 45</span>
   </div>
 </div>
 
@@ -199,18 +180,6 @@
   <section class="demo" id="demo" hidden>
     <p>Ouça um trecho feito só com sons do pack:</p>
     <audio id="demoAudio" controls preload="none" src="/demo.mp3"></audio>
-  </section>
-
-  <section class="inside">
-    <h2>O que vem dentro</h2>
-    <div class="rows">
-      <div class="row"><span>Kits de bateria (loop + one-shots)</span><b>12 kits</b></div>
-      <div class="row"><span>Vocal chops afinados</span><b>40 sons</b></div>
-      <div class="row"><span>Graves e 808</span><b>30 sons</b></div>
-      <div class="row"><span>FX e transições</span><b>28 sons</b></div>
-      <div class="row"><span>Loops de melodia</span><b>25 loops</b></div>
-    </div>
-    <p class="compat">Arquivos <b>.WAV 44.1kHz</b> num <b>.zip</b> único — sem instalar nada.</p>
   </section>
 
   <section class="close">
