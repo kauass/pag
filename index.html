@@ -108,10 +108,6 @@
   .demo p{font-size:14px;color:var(--dim);margin-bottom:10px;}
   .demo audio{width:100%;}
 
-  /* ---------- FECHAMENTO ---------- */
-  .close{margin:40px 0 8px;text-align:center;}
-  .close h2{font-size:clamp(22px,5.4vw,28px);margin-bottom:20px;}
-
   footer{
     margin-top:40px;padding:24px 0 32px;border-top:1px solid var(--line);
     text-align:center;font-size:13px;color:var(--dim);
@@ -126,7 +122,9 @@
     padding:10px 16px calc(10px + env(safe-area-inset-bottom));
     background:rgba(10,13,10,.96);backdrop-filter:blur(10px);
     border-top:1px solid var(--line);
+    transform:translateY(110%); transition:transform .25s ease;
   }
+  .sticky.show{transform:none;}
   .sticky .p{flex:1;min-width:0;line-height:1.2;}
   .sticky .p b{font-family:var(--display);font-weight:800;font-size:22px;color:var(--lime);display:block;}
   .sticky .p span{font-size:11.5px;color:var(--dim);}
@@ -154,9 +152,9 @@
 <main class="wrap">
 
   <section class="hero">
-    <span class="eyebrow">FL Studio Mobile e PC</span>
+    <span class="eyebrow">Pack pra FL Studio Mobile e PC</span>
     <h1>120+ samples de eletrofunk <em>prontos pra usar</em></h1>
-    <p class="sub">Baixe, arraste pro seu projeto e comece a produzir hoje. No celular ou no computador.</p>
+    <p class="sub">Bumbo, caixa, 808, vocal chop, FX e melodia. Tudo em .WAV, afinado e com o BPM no nome — você arrasta pro projeto e já sai tocando.</p>
   </section>
 
   <section class="buy">
@@ -166,26 +164,20 @@
     </div>
 
     <a href="https://pay.kiwify.com.br/a0GKsLJ" class="cta" data-cta="topo">Comprar agora</a>
-    <p class="under">Pix, cartão ou boleto · <b>download na hora</b></p>
+    <p class="under">Pix, cartão ou boleto · <b>acesso liberado na hora</b></p>
 
     <ul class="checks">
-      <li>120+ arquivos <b>.WAV</b>, separados por pasta</li>
-      <li>BPM e tom no nome de cada arquivo</li>
-      <li>Funciona no FL Studio Mobile, no PC e em qualquer DAW</li>
-      <li>Uso livre nas suas faixas, sets e lançamentos</li>
+      <li>120+ arquivos em <b>.WAV</b>, separados por pasta</li>
+      <li>BPM e tom no nome — encaixa sem precisar afinar</li>
+      <li>Roda no FL Studio Mobile, no PC e em qualquer DAW</li>
+      <li>Uso livre: pode lançar e monetizar suas faixas</li>
     </ul>
   </section>
 
   <!-- Previa: suba um demo.mp3 na raiz do projeto. Sem o arquivo, o bloco some sozinho. -->
   <section class="demo" id="demo" hidden>
-    <p>Ouça um trecho feito só com sons do pack:</p>
+    <p>Ouça um trecho montado só com sons do pack:</p>
     <audio id="demoAudio" controls preload="none" src="/demo.mp3"></audio>
-  </section>
-
-  <section class="close">
-    <h2>Pega o pack e vai produzir</h2>
-    <a href="https://pay.kiwify.com.br/a0GKsLJ" class="cta" data-cta="final">Comprar por R$ 45</a>
-    <p class="under">Acesso liberado no e-mail logo após o pagamento</p>
   </section>
 
 </main>
@@ -230,6 +222,20 @@
     fetch(a.getAttribute("src"), {method:"HEAD"})
       .then(function(r){ if(r.ok) demo.hidden = false; })
       .catch(function(){});
+  }
+
+  /* Barra fixa: aparece so quando o botao principal sai da tela,
+     pra nunca existirem dois botoes de compra visiveis ao mesmo tempo. */
+  var sticky = document.querySelector(".sticky");
+  var mainCta = document.querySelector('[data-cta="topo"]');
+  if(sticky && mainCta){
+    if("IntersectionObserver" in window){
+      new IntersectionObserver(function(e){
+        sticky.classList.toggle("show", !e[0].isIntersecting);
+      }, {threshold:0}).observe(mainCta);
+    } else {
+      sticky.classList.add("show");
+    }
   }
 
   /* Eventos de compra (plugue GA4 / Meta Pixel no <head>). */
